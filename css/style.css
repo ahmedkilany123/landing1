@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --main-color:#f16b01;
+    --second-color : #f28939;
+    --main-transition: 0.5s
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding: 0 70px;
+}
+input::placeholder {
+    color: white;
+}
+/* start header  */
+header {
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+    background-color: #101324;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+}
+
+header .logo a {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 800;
+}
+header nav {
+    margin: 0 auto;
+    }
+header ul {
+    display: flex;
+}
+header ul li {
+    padding: 20px;
+}
+header ul li a {
+     color: white;
+     font-size: 20px;
+     font-weight: 600;
+     transition: var(--main-transition);
+     -webkit-transition: var(--main-transition);
+     -moz-transition: var(--main-transition);
+     -ms-transition: var(--main-transition);
+     -o-transition: var(--main-transition);
+}
+header ul li a:hover {
+    color: var(--main-color);
+}
+header .form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+    header .form input[type="email"]{
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 7px 0 0 7px;
+    outline: none;
+}
+header .form input[type="submit"]{
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    left: -2px;
+    border: 1px solid var(--main-color);
+    border-radius: 0px 5px 5px 0px;
+    cursor: pointer;
+}
+
+@media (max-width:991px) {
+    header {
+padding: 5px 20px;
+}
+header .form {
+    
+margin: 10px auto;
+}
+}
+@media (max-width:768px) {
+    header {padding: 5px 10px;}
+
+header .logo {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+header ul li {
+    padding: 6px;
+}
+header ul li a {
+
+font-size: 15px;
+}
+}
+
+/* end header  */
+
+/* start landing  */
+.landing {
+    height: calc( 100vh - 100px);
+    background-image: url(../img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    bottom: 0;
+    position: relative;
+}
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height:100%;
+    left: 0;
+    top: 0;
+    background-color: #00000066;
+}
+.landing .container {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.landing .info {
+    position: relative;
+    top: -15px;
+}
+.landing .info h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--main-color);
+    line-height: 1;
+    margin-bottom: 30px;
+}
+.landing .info h2 span {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.landing .info p {
+    font-size: 20px;
+    font-weight: 600;
+}
+.landing .info a {
+    position: absolute;
+    color: black;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.landing .info a:hover {
+    background-color:var(--second-color);
+}
+.landing .login {
+    text-align: center;
+    background-color: black;
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+.landing .login h2 {
+    background-color: white;
+    border-radius: 10px;
+    color: var(--main-color);
+    padding: 5px 10px;
+    font-size: 25px;
+    width: 200px;
+    margin-bottom: 20px;
+}
+.landing .login input:not(input[type="submit"]){
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-bottom: 1px solid var(--main-color);
+    border-right: none;
+    margin-bottom: 20px;
+}
+.landing .login input[type="submit"]{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: white;
+    padding: 5px 10px;
+    font-size: 25px;
+    width: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.landing .login input[type="submit"]:hover {
+    background-color: var(--second-color);
+}
+.landing .login .sign-up {
+    margin-bottom: 10px;
+}
+.landing .login .sign-up span {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.landing .login .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.landing .login .social i {
+    font-size: 18px;
+    display: inline-block;
+    transition:var(--main-transition) ;
+    -webkit-transition:var(--main-transition) ;
+    -moz-transition:var(--main-transition) ;
+    -ms-transition:var(--main-transition) ;
+    -o-transition:var(--main-transition) ;
+}
+.landing .login .social i:hover {
+    color: var(--main-color);
+    transform: scale(1.1) rotate(10deg);
+    -webkit-transform: scale(1.1) rotate(10deg);
+    -moz-transform: scale(1.1) rotate(10deg);
+    -ms-transform: scale(1.1) rotate(10deg);
+    -o-transform: scale(1.1) rotate(10deg);
+}
+@media (max-width:991px) {
+    .landing .container {
+        flex-direction: column;
+    }
+    .landing .info {
+        top: 25px;
+    }
+    .landing .info h2 {
+        text-align: center;
+    }
+    .landing .info p {
+        text-align: center;
+    }
+    .landing .info a {
+        text-align: center;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 110%;
+    }
+    .landing .login h2 {
+        font-size: 18px;
+        width: 150px;
+        text-align: center;
+        margin: 10px auto;
+    }
+}
+@media (max-width:768px) {
+    .landing {
+        height: 100vh;
+    }
+    .landing .container {
+        padding: 10px;
+    }
+
+    .landing .info h2 {
+        font-size: 30px;
+    }
+    .landing .info h2 span {
+        padding: 10px; 
+        font-size: 25px;
+    }
+    .landing .info p {
+        font-size: 16px;
+    }
+    .landing .login  {
+        display: block;
+        position: relative;
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+/* end landing  */
